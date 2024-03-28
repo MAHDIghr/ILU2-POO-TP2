@@ -23,7 +23,7 @@ public class BoundaryAcheterProduit {
 			String produitSouhaitee = Clavier.entrerChaine("Quel produit voulez-vous acheter ?\n");
 			Gaulois[] vendeursDuProduit = controlAcheterProduit.trouverLesVendeursQuiVendsProduit(produitSouhaitee);
 			if (vendeursDuProduit == null) {
-				System.out.println("DÃ©solÃ©, personne ne vend ce produit au marchÃ©.\n");
+				System.out.println("Désolé, personne ne vend ce produit au marché.\n");
 			} else {
 				System.out.println("Chez quel commercant voullez vous " + "acheter des " + produitSouhaitee + "?\n");
 				for (int i = 0; i < vendeursDuProduit.length; i++) {
@@ -38,7 +38,7 @@ public class BoundaryAcheterProduit {
 	}
 
 	private void effectuerLachatDuProduit(String nomVendeur, String produitSouhaitee, String nomAcheteur) {
-		System.out.println(nomAcheteur + "se dÃ©place jusqu'Ã  l'Ã©tal du vendeur" + nomVendeur + ".\n");
+		System.out.println(nomAcheteur + "se déplace jusqu'à  l'étal du vendeur" + nomVendeur + ".\n");
 		int nbProduitAchete = Clavier
 				.entrerEntier("Bonjour " + nomAcheteur + "\nCombien de " + produitSouhaitee + " voulez-vous acheter\n");
 		int quantiteRest = controlAcheterProduit.QuantiteRestante(nomVendeur, nbProduitAchete);
@@ -48,12 +48,12 @@ public class BoundaryAcheterProduit {
 		} else if (quantiteRest < nbProduitAchete) {
 			controlAcheterProduit.effectuerLachat(nomVendeur, quantiteRest);
 			System.out.println(nomAcheteur + " veut acheter " + nbProduitAchete + " " + produitSouhaitee
-					+ " malheureusement " + nomVendeur + " nâ€™en a plus que " + quantiteRest + "\n" + nomAcheteur
-					+ " achÃ¨te tout le stock de " + nomVendeur + ".\n");
+					+ " malheureusement " + nomVendeur + " n'en a plus que " + quantiteRest + "\n" + nomAcheteur
+					+ " achète tout le stock de " + nomVendeur + ".\n");
 		} else {
 			controlAcheterProduit.effectuerLachat(nomVendeur, nbProduitAchete);
 			System.out.println(
-					nomAcheteur + " achÃ¨te " + nbProduitAchete + " " + produitSouhaitee + " a " + nomVendeur + ".\n");
+					nomAcheteur + " achète " + nbProduitAchete + " " + produitSouhaitee + " à " + nomVendeur + ".\n");
 		}
 	}
 

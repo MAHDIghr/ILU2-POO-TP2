@@ -1,6 +1,5 @@
 package controleur;
 
-import personnages.Gaulois;
 import villagegaulois.Village;
 
 public class ControlVerifierIdentite {
